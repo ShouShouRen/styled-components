@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   // const [isSignInClick, setSignInClick] = React.useState(false)
-  const [searchStart,setSearchStart] = React.useState(false)
+  const [searchStart, setSearchStart] = React.useState(false)
   return (
     <div>
       <header style={{
@@ -24,7 +24,7 @@ function App() {
             alignItems: 'center'
           }}>
             <div className='search'>
-              <i onClick={()=> setSearchStart(!searchStart)} className='fas fa-search'></i>
+              <i onClick={() => setSearchStart(!searchStart)} className='fas fa-search'></i>
               <input className={searchStart ? 'open' : ''} placeholder="搜尋網站目標" type='text' />
             </div>
             <div className='navigation'>
@@ -39,6 +39,13 @@ function App() {
               <button className='sign-in-btn'>Sign Up</button>
             </div>
           </div>
+        </div>
+        <div style={{
+          marginTop: 110
+        }}>
+          <div style={{ fontSize: 48, fontWeight: 600 }}>Let's Get Cooking</div>
+          <div style={{ marginTop: 25, fontSize: 16 }}>Explore the best recipes from around the world.</div>
+          <button style={{ marginTop: 25, padding: '10px 25px' }}>Explore Recipes</button>
         </div>
       </header>
     </div>
