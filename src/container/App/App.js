@@ -44,8 +44,11 @@ function App() {
           marginTop: 110
         }}>
           <div style={{ fontSize: 48, fontWeight: 600 }}>Let's Get Cooking</div>
-          <div style={{ marginTop: 25, fontSize: 16 }}>Explore the best recipes from around the world.</div>
-          <button style={{ marginTop: 25, padding: '10px 25px' }}>Explore Recipes</button>
+          <div style={{ marginTop: 65, fontSize: 16, lineHeight: 2 }}>
+            <p>Explore the best recipes from around the world.</p>
+            <p>Make cooking enjoyble again.</p>
+          </div>
+          <button style={{ marginTop: 65, padding: '10px 25px', backgroundColor: '#3b7844', border: 'none', color: 'white', borderRadius: 8, outline: 'none', cursor: 'pointer', }}>Explore Recipes</button>
         </div>
       </header>
     </div>
