@@ -1,16 +1,17 @@
 import React from 'react';
 import Logo from './logo.png';
 import './App.css';
-import{
+import {
   StyledAppHeader,
   StyledAppHeaderContent,
   StyledAppHeaderNavigationBar,
   StyledExploerButton,
   StyledSignInButton
-}from './App.Styled';
+} from './App.Styled';
 
 function App() {
   // const [isSignInClick, setSignInClick] = React.useState(false)
+  const [pathname, setPathname] = React.useState('/')
   const [searchStart, setSearchStart] = React.useState(false)
   return (
 
@@ -38,12 +39,16 @@ function App() {
         </div>
       </StyledAppHeaderNavigationBar>
       <StyledAppHeaderContent>
-        <div className='content-title'>Let's Get Cooking</div>
-        <div className='content-text'>
-          <p>Explore the best recipes from around the world.</p>
-          <p>Make cooking enjoyble again.</p>
-        </div>
-        <StyledExploerButton>Explore Recipes</StyledExploerButton>
+        {pathname === '/' &&
+          <React.Fragment>
+            <div className='content-title'>Let's Get Cooking</div>
+            <div className='content-text'>
+              <p>Explore the best recipes from around the world.</p>
+              <p>Make cooking enjoyble again.</p>
+            </div>
+            <StyledExploerButton>Explore Recipes</StyledExploerButton>
+          </React.Fragment>
+        }
       </StyledAppHeaderContent>
     </StyledAppHeader>
   );
