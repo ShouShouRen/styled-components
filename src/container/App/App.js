@@ -4,7 +4,8 @@ import './App.css'
 
 
 function App() {
-  const [isSignInClick, setSignInClick] = React.useState(false)
+  // const [isSignInClick, setSignInClick] = React.useState(false)
+  const [searchStart,setSearchStart] = React.useState(false)
   return (
     <div>
       <header style={{
@@ -22,7 +23,10 @@ function App() {
             justifyContent: 'space-between',
             alignItems: 'center'
           }}>
-            <div className='search'>搜尋</div>
+            <div className='search'>
+              <i onClick={()=> setSearchStart(!searchStart)} className='fas fa-search'></i>
+              <input className={searchStart ? 'open' : ''} placeholder="搜尋網站目標" type='text' />
+            </div>
             <div className='navigation'>
               <ul>
                 <li>Recipes</li>
