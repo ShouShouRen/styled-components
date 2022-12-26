@@ -1,8 +1,10 @@
 import React from 'react';
 import Logo from './logo.png';
+import './App.css'
 
 
 function App() {
+  const [isSignInClick, setSignInClick] = React.useState(false)
   return (
     <div>
       <header style={{
@@ -33,15 +35,7 @@ function App() {
               </ul>
             </div>
             <div>
-              <button style={{
-                color: '#fff',
-                border: 'none',
-                backgroundColor: 'green',
-                padding: '10px 25px 10px 25px',
-                borderRadius: '4px',
-                outline: 'none',
-                cursor: 'pointer'
-              }}>Sign Up</button>
+              <button className='sign-in-btn'>Sign Up</button>
             </div>
           </div>
         </div>
